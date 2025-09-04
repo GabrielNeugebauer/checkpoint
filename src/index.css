@@ -1,0 +1,22 @@
+:root {
+  --green-emphasis: #81FE88;
+/*--font: */
+  --green-dark: #132E35;
+  --graphite: #01080E;
+  --grey-dark: #171D1F;
+  --grey-medium: #888888;
+  --grey: #3E3E3F;
+  --grey-light: #BCBCBC;
+  --off-white: #E1E1E1;
+  --white: #FFFFFF;
+}
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--graphite);
+}

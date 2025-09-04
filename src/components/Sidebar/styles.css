@@ -1,0 +1,33 @@
+aside {
+    background-color: var(--grey-dark);
+    padding: 2.5em 1em;
+    width: 10%;
+    border-radius: 8px;
+}
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    list-style-type: none;
+}
+
+.sidebar-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    gap: 10px;
+}
+
+.list__link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.list__link--selected {
+    color: var(--green-emphasis);
+    border: 1px solid var(--green-emphasis);
+    padding: 0.75em 1em;
+    border-radius: 8px;
+    text-decoration: none;
+}
