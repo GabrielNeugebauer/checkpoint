@@ -1,0 +1,7 @@
+.container {
+  width: 62vw;
+  margin: 3.5em auto;
+  display: flex;
+  height: 100vh;
+  gap: 16px
+}
