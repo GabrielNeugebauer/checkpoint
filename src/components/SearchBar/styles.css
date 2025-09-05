@@ -1,0 +1,10 @@
+.search-bar {
+    width: 100%;
+    color: var(--gray-light);
+    padding: .5em 1em;
+    height: 49px;
+    font-family: var(--font);
+    font-size: 22px;
+    background: var(--gray-dark) url('./assets/search.svg') no-repeat 95% center;
+
+}

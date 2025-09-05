@@ -1,7 +1,7 @@
 .header {
     width: 100%;
-    background-color: var(--grey-dark);
-    color: var(--white);
+    background-color: var(--blue-soft);
+    color: var(--black);
     margin-bottom: 1.5em;
     padding: .5em 1em;
     height: 49px;

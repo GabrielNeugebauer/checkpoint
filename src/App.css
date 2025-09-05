@@ -1,7 +1,18 @@
 .container {
   width: 62vw;
-  margin: 3.5em auto;
+  margin: 2em;
   display: flex;
   height: 100vh;
   gap: 16px
+}
+.content {
+  width: 62vw;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 16px
+}
+.title-section {
+  margin: 1em;
 }
