@@ -1,0 +1,34 @@
+.email-breach-list {
+    list-style: none;
+    padding: 0;
+}
+
+.email-breach-item {
+    background: var(--yellow-light);
+    border: 3px solid var(--black);
+    border-radius: 32px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.email-breach-item h2 {
+    margin: 0 0 0.5em;
+}
+
+.email-breach-item p {
+    margin: 0.5em 0;
+}
+
+.email-breach-item-content {
+    display: flex;
+    flex-direction: row;
+}
+.breach-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 1em;
+    border-radius: 16px;
+    object-fit: contain;
+    background-color: var(--grey-light);
+    border: 1px solid var(--black);
+}

@@ -2,7 +2,8 @@ import './App.css'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import SearchBar from './components/SearchBar'
-import { useState, useEffect } from 'react'
+import BreachContainer from './components/BreachContainer'
+import { useState } from 'react'
 
 function App() {
   const [email, setEmail] = useState([]);
@@ -32,20 +33,7 @@ function App() {
           <span>&ensp;&ensp;&ensp;Verifique se o seu e-mail foi exposto em algum vazamento de dados.</span>
         </div>
         <SearchBar termo="e-mail" onSearch={onSearch} />
-        <ul className='email-breach-list'>
-          {email ? email.map((item, index) => (
-            <li key={index} className='email-breach-item'>
-              <h2>{item.Title}</h2>
-              <p><strong>Data do vazamento:</strong> {item.BreachDate}</p>
-              <p><strong>Data da publicação:</strong> {item.AddedDate}</p>
-              <p><strong>Número de contas afetadas:</strong> {item.PwnCount}</p>
-              <p><strong>Descrição:</strong> {item.Description}</p>
-              <p><strong>Dados comprometidos:</strong> {item.DataClasses.join(', ')}</p>
-              <a href={item.Domain} target="_blank" rel="noopener noreferrer">Mais informações</a>
-            </li>
-          )) : <p>Nenhum vazamento encontrado para este e-mail.</p>}
-
-        </ul>
+        <BreachContainer email={email} />
       </div>
     </div>
   )
