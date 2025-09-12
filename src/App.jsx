@@ -12,6 +12,9 @@ function App() {
     if (!inputEmail) return;
 
     try {
+      if (!inputEmail.includes('@')) {
+        throw new Error('Invalid email format');
+      }
       const response = await fetch(`https://corsproxy.io/?https://haveibeenpwned.com/unifiedsearch/${inputEmail}`); //Para não depender de backend.
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -33,7 +36,7 @@ function App() {
           <span>&ensp;&ensp;&ensp;Verifique se o seu e-mail foi exposto em algum vazamento de dados.</span>
         </div>
         <SearchBar termo="e-mail" onSearch={onSearch} />
-        <BreachContainer email={email} />
+        <BreachContainer email={email} className={email.length === 0 ? 'hide' : ''} />
       </div>
     </div>
   )
