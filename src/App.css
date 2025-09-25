@@ -1,13 +1,14 @@
-.container {
-  width: 62vw;
+.main-container {
   margin: 2em;
   display: flex;
   height: 100vh;
   gap: 16px
 }
-.content {
-  width: 62vw;
+.content-root {
+  width: 80vw;
   margin: 1em auto;
+  margin-left: 16px;
+  margin-right: 16px;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -15,4 +16,32 @@
 }
 .title-section {
   margin: 1em;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.module {
+  width: 70%;
+  background-color: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1em;
+}
+.info {
+  width: 30%;
+  background-color: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1em;
+}
+.info-list {
+  padding-left: 20px;
+  font-size: var(--font-size);
+}
+.info-title {
+  font-size: calc(var(--font-size) + 4px);
+  font-weight: bold;
 }
