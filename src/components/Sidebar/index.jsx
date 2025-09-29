@@ -5,34 +5,46 @@ import Password from './assets/key.svg';
 import Web from './assets/web.svg';
 import './styles.css';
 
-export default function Sidebar() {
+export default function Sidebar({ onSelect, active }) {
     return (
         <aside className="sidebar">
             <nav>
                 <ul className="sidebar-list">
                     <li>
-                        <a className="list__link" href="#">
+                        <button
+                            className={`list__link${active === 'home' ? ' list__link--selected' : ''}`}
+                            onClick={() => onSelect('home')}
+                        >
                             <img className="list__icon" src={Home} alt="" />
                             <span className="list__text">Home</span>
-                        </a>
+                        </button>
                     </li>
                     <li>
-                        <a className="list__link list__link--selected" href="#">
+                        <button
+                            className={`list__link${active === 'email' ? ' list__link--selected' : ''}`}
+                            onClick={() => onSelect('email')}
+                        >
                             <img className="list__icon" src={Email} alt="" />
                             <span className="list__text">E-mail</span>
-                        </a>
+                        </button>
                     </li>
                     <li>
-                        <a className="list__link" href="#">
+                        <button
+                            className={`list__link${active === 'senha' ? ' list__link--selected' : ''}`}
+                            onClick={() => onSelect('senha')}
+                        >
                             <img className="list__icon" src={Password} alt="" />
                             <span className="list__text">Senha</span>
-                        </a>
+                        </button>
                     </li>
                     <li>
-                        <a className="list__link" href="#">
+                        <button
+                            className={`list__link${active === 'ip' ? ' list__link--selected' : ''}`}
+                            onClick={() => onSelect('ip')}
+                        >
                             <img className="list__icon" src={Web} alt="" />
                             <span className="list__text">IP</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </nav>

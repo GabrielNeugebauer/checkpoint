@@ -1,0 +1,10 @@
+/* Adicione ao seu styles.css */
+.loading {
+  font-weight: bold;
+  color: #007bff;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}

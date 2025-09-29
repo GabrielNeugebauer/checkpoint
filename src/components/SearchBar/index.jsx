@@ -1,5 +1,4 @@
-import Search from './assets/search.svg'
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 import './styles.css'
 
 /*O link para a API aberta do haveibeenpwned é https://haveibeenpwned.com/unifiedsearch/{your-email-here}*/

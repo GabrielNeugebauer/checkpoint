@@ -24,3 +24,12 @@
 body {
   background-color: var(--white);
 }
+.Warn {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  background-color: var(--yellow-light);
+  padding: 10px;
+  border-radius: 5px;
+  border: #000000 solid 2px;
+}

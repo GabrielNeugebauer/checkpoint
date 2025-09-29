@@ -2,36 +2,31 @@ import './App.css'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import EmailModule from './components/EmailModule'
+import IPModule from './components/IPModule'
+import { useState } from 'react'
 
 function App() {
+  const [activeModule, setActiveModule] = useState('email'); // 'email' ou 'ip'
+
   return (
     <div className="main-container">
-      <Sidebar />
+      <Sidebar onSelect={setActiveModule} active={activeModule}/>
       <div className='content-root'>
         <Header />
-        <div className='content'>
-          <div className='module'>
-            <EmailModule />
-          </div>
-          <div className='info'>
-            <span className='info-title'>Meu e-mail foi vazado. E agora?</span>
-            <br />
-            <br />
-            <p>Se o seu e-mail foi exposto em um vazamento de dados, é importante tomar algumas medidas para proteger sua conta e informações pessoais. Aqui estão algumas ações recomendadas:</p>
-            <br />
-            <ul className='info-list'>
-              <li>Altere sua senha imediatamente: Se você descobrir que seu e-mail foi comprometido, altere a senha da conta afetada e de qualquer outra conta que use a mesma senha.</li>
-              <li>Habilite a autenticação de dois fatores (2FA) sempre que possível: Adicione uma camada extra de segurança à sua conta ativando a autenticação de dois fatores, se disponível.</li>
-              <li>Verifique suas contas: Monitore suas contas de e-mail e outras contas online para atividades suspeitas ou não autorizadas.</li>
-              <li>Cuidado com phishing: Esteja atento a e-mails ou mensagens suspeitas que tentam enganá-lo para obter informações pessoais ou financeiras.</li>
-              <li>Atualize suas informações de segurança: Certifique-se de que suas informações de recuperação de conta, como número de telefone e e-mail alternativo, estejam atualizadas.</li>
-              <li>Use um gerenciador de senhas: Considere usar um gerenciador de senhas para criar e armazenar senhas fortes e únicas para cada uma de suas contas.</li>
-              <li>Monitore seu crédito: Se o vazamento envolveu informações financeiras, considere monitorar seu relatório de crédito para detectar atividades suspeitas.</li>
-            </ul>
-            <br />
-            <p>Lembre-se de que a segurança online é uma responsabilidade contínua. Mantenha-se informado sobre as melhores práticas de segurança e esteja sempre vigilante em relação às suas contas e informações pessoais.</p>
-          </div>
-        </div>
+        {activeModule === 'email' && <EmailModule />}
+        {activeModule === 'ip' && <IPModule />}
+        {activeModule === 'home' && <div className='home'>
+          <h1>Bem-vindo ao CheckPoint</h1>
+          <p>Seu ponto de verificação para segurança digital. Utilize as ferramentas de checagem de e-mail e IP para garantir que suas informações estejam seguras.</p>
+          <br />
+          <p>Selecione uma opção no menu lateral para começar.</p>
+          <br />
+          <h2 className='Warn'>AVISO: ESTE APP ESTÁ EM DESENVOLVIMENTO. Bugs podem ocorrer. Caso ocorra algum problema, entre em contato no github do projeto.</h2>
+        </div>}
+        {activeModule === 'senha' && <div className='password'>
+          <h1>Em breve...</h1>
+          <p>Estamos trabalhando para trazer a você uma ferramenta de checagem de senhas. Fique atento às atualizações!</p>
+        </div>}
       </div>
     </div>
   )
