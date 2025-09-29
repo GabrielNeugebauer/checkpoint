@@ -3,6 +3,7 @@ aside {
     padding: 2.5em 1em;
     width: 11%;
     border-radius: 8px;
+    min-width: 80px;
 }
 .sidebar-list {
     display: flex;
@@ -15,7 +16,6 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 22px;
     gap: 10px;
 }
 
@@ -28,7 +28,10 @@ aside {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+    width: 100%;
+    min-width: 60px;
+    height: 100%;
 }
 
 .list__link--selected {
