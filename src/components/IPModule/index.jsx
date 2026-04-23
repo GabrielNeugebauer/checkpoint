@@ -19,7 +19,7 @@ export default function IPModule() {
       if (inputIP.split('.').length !== 4) {
         throw new Error('Invalid IP format');
       }
-      const response = await fetch(`https://corsproxy.io/?https://rdap.registro.br/ip/${inputIP}`);
+      const response = await fetch(`https://rdap.registro.br/ip/${inputIP}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
